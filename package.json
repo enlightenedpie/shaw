@@ -1,14 +1,10 @@
 {
-  "name": "gatsby-starter-eventually",
+  "name": "shaw",
   "version": "1.0.0",
-  "description": "Gatsby.js V2 starter template based on Eventually by HTML5 UP",
+  "description": "The Shaw Group",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-eventually.git"
-  },
-  "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
+    "url": "git@github.com:enlightenedpie/shaw.git"
   },
   "dependencies": {
     "gatsby": "^2.20.2",
@@ -24,7 +20,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "npm run clean && gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
@@ -36,13 +32,7 @@
     "rimraf": "^3.0.2"
   },
   "keywords": [
-    "gatsby",
-    "gatsby-starter",
-    "gatsby-starter-eventually"
+    "gatsby"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-eventually/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-eventually#readme"
+  "license": "MIT"
 }
