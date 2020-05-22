@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'The Shaw Group | Pipes and More Pipes!!!', // <title>
+  siteTitle: 'The Shaw Group', // <title>
   manifestName: 'Shaw Pipes',
   manifestShortName: 'ShawPipes', // max 12 characters
   manifestStartUrl: '/',
@@ -9,9 +9,9 @@ module.exports = {
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/`, // This path is subpath of your hosting https://domain/portfolio
   // social
-  heading: 'Shaw Pipes',
+  heading: 'The Shaw Group',
   subHeading:
-    "We love laying pipe, and our pipes our huge. Email us and we'll let you know when we're ready to lay some pipe for you.",
+    "Coming Soon",
   socialLinks: [
     {
       icon: 'fa-twitter',
