@@ -1,28 +1,16 @@
-import React from 'react';
-import config from '../../config';
+import React from "react"
+import { SocialIcon } from "react-social-icons"
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer id="footer">
-      <ul className="icons">
-        {config.socialLinks.map(social => {
-          const { icon, name, url } = social;
-          return (
-            <li>
-              <a href={url} class={`icon ${icon}`}>
-                <span class="label">{name}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="copyright">
-        <li>&copy; Eventually.</li>
-        <li>
-          Credits: <a href="http://unsplash.com/">Unsplash</a> +
-          <a href="http://html5up.net">HTML5 UP</a>
-        </li>
-      </ul>
-    </footer>
-  );
+    <div>
+      <footer className="py-2" style={{ backgroundColor: "#5E35B1" }}>
+        <div className="container">
+          <p>The Shaw Group | © Copyright 2020</p>
+        </div>
+      </footer>
+    </div>
+  )
 }
+
+export default Footer

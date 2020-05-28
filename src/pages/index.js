@@ -1,28 +1,19 @@
-import React from 'react';
+import React from "react"
+import "../global.css"
+import LandingPage from "../subpages/LandingPage";
+import Services from "../subpages/Services";
+import Team from "../subpages/Team";
+import End from "../subpages/End";
+import Footer from "../components/Footer";
 
-import Layout from '../components/Layout';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import EmailForm from '../components/EmailForm';
-import SlideShow from '../components/SlideShow';
+function Index() {
+  return (
+    <>
+      <LandingPage/>
+      <End/>
+      <Footer/>
+    </>
+  )
+}
 
-var settings = {
-  images: [
-    { url: require('../assets/images/bg01.jpg'), position: 'center' },
-    { url: require('../assets/images/bg02.jpg'), position: 'center' },
-    { url: require('../assets/images/bg03.jpg'), position: 'center' },
-  ],
-  // Delay.
-  delay: 6000,
-};
-
-const IndexPage = () => (
-  <Layout>
-    <Header />
-    <EmailForm />
-    <Footer />
-    <SlideShow settings={settings} />
-  </Layout>
-);
-
-export default IndexPage;
+export default Index
