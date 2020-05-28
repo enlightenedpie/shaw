@@ -44,9 +44,9 @@ class Layout extends Component {
             >
               <html lang="en" />
             </Helmet>
-            <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
+            <main className={[isPreloaded ? 'main-body is-preload' : 'main-body','dark'].join(' ')}>
               {children}
-            </div>
+            </main>
           </>
         )}
       />

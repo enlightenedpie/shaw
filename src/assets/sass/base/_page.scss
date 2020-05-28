@@ -34,6 +34,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -53,7 +55,7 @@ body,
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
   @include vendor('justify-content', 'center');
-  background-color: _palette(bg);
+  background-color: _palette(bg-light);
   padding: 6em 4em 4em 4em;
 
   // Stops initial animations until page loads.
@@ -69,6 +71,10 @@ body,
   > * {
     position: relative;
     z-index: 2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: _palette(bg);
   }
 
   @include breakpoint('<=xlarge') {

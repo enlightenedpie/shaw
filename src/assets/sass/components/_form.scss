@@ -75,13 +75,17 @@
 		background-color: transparent;
 		border-radius: _size(border-radius);
 		border: none;
-		border: solid _size(border-width) _palette(border);
+		border: solid _size(border-width) _palette(fg-dark);
 		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+
+		@media (prefers-color-scheme: dark) {
+			border: solid _size(border-width) _palette(fg-light);
+		}
 
 		&:invalid {
 			box-shadow: none;
@@ -131,7 +135,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -201,6 +205,32 @@
 	}
 
 	::-webkit-input-placeholder {
+		color: _palette(fg-dark) !important;
+		opacity: 1.0;
+	}
+
+	:-moz-placeholder {
+		color: _palette(fg-dark) !important;
+		opacity: 1.0;
+	}
+
+	::-moz-placeholder {
+		color: _palette(fg-dark) !important;
+		opacity: 1.0;
+	}
+
+	:-ms-input-placeholder {
+		color: _palette(fg-dark) !important;
+		opacity: 1.0;
+	}
+
+	.formerize-placeholder {
+		color: _palette(fg-dark) !important;
+		opacity: 1.0;
+	}
+
+@media (prefers-color-scheme: dark) {
+	::-webkit-input-placeholder {
 		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
@@ -224,3 +254,4 @@
 		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
+}

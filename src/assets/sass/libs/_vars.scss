@@ -31,16 +31,19 @@
 // Palette.
 	$palette: (
 		bg:					#000,
-		fg:					rgba(255,255,255,0.75),
+		bg-light:		#fff,
+		fg:					rgba(255,255,255,0.85),
 		fg-bold:			#fff,
-		fg-light:			rgba(255,255,255,0.5),
-		border:				rgba(255,255,255,0.35),
+		fg-light:			rgba(255,255,255,0.85),
+		fg-dark:			rgba(0,0,0,.85),
+		border:				rgba(255,255,255,0.75),
 		border-bg:			rgba(255,255,255,0.125),
 		border2:			rgba(255,255,255,0.25),
 
 		accent: (
 			bg:				#1cb495,
 			fg:				mix(#1cb495, #ffffff, 25%),
+			fg-dark:		rgba(0,0,0,.85),
 			fg-bold:		#ffffff,
 			fg-light:		mix(#1cb495, #ffffff, 40%),
 			border:			rgba(255,255,255,0.25),

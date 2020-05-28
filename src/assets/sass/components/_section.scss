@@ -14,9 +14,13 @@
 
 	header {
 		p {
-			color: _palette(fg-light);
+			color: _palette(fg-dark);
 			position: relative;
 			margin: 0 0 (_size(element-margin) * 0.75) 0;
+
+			@media (prefers-color-scheme: dark) {
+				color: _palette(fg-light);
+			}
 		}
 
 		h2 + p {
