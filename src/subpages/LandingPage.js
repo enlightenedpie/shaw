@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-import {CSSTransition} from "react-transition-group"
 import Navbar from "../components/Navbar"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
@@ -32,7 +31,7 @@ function LandingPage() {
 
   return (
     <section id = "home" className = "home-container">
-      {images.map((img,i) => <img src={img} style={i===active ? {opacity: 1,animation: 'moveImage linear 30s both'} : {}} />)}
+      {images.map((img,i) => <img src={img} className={i===active ? 'active' : ''} />)}
       <div className="container">
         <Navbar />
         <div className="centerItems">

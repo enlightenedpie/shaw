@@ -12,14 +12,14 @@ body {
 
 .home-container {
   position: relative;
-  padding-top: 100vh;
+  padding-top: 90vh;
   width: 100%;
   overflow: hidden;
-  background: black;
+  background: whitesmoke;
 }
 
 .home-container > .container {
-  color: white;
+  color: var(--gray-dark);
   position: absolute;
   top: 0;
   left: 0;
@@ -36,12 +36,35 @@ body {
 .pos-f-t {
   position: absolute;
   top: 0;
+  padding: 1em 0;
+  width: 100%
+}
+
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar > img {
+  width: 6em;
+  height: auto;
+  display: block;
 }
 
 .home-container > img {
   position: absolute;
   display: block;
-  filter: brightness(.5);
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  transition: opacity 2s ease-in-out
+}
+
+.home-container > img.active {
+  opacity: .3;
+  /* animation: fadeImage 2s ease-in-out both */
 }
 
 .flexbox {
@@ -92,7 +115,7 @@ footer a {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: .25;
   }
 }
 
