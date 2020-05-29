@@ -42,7 +42,7 @@ h1 {
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   max-width: unset;
   padding: 0 4em 4em;
   z-index: 3;
@@ -81,7 +81,7 @@ h1 {
   justify-content: center
 }
 
-.centerItems > img {
+.home-container > .container > img {
   width: 30%;
   height: auto;
   display: block;
@@ -108,7 +108,7 @@ h1 {
   transition: border 500ms ease-in-out
 }
 
-textarea:focus{
+textarea:focus {
   animation: none !important
 }
 
@@ -171,7 +171,7 @@ footer span {
     width: auto;
   }
 
-  .centerItems > img {
+  .home-container > .container > img {
     width: 100%;
     min-height: auto;
   }
@@ -183,7 +183,7 @@ footer span {
 }
 
 @media (min-width: 577px) and (max-width: 1024px) {
-  .centerItems > img {
+  .home-container > .container > img {
     width: 60%;
     min-height: auto;
   }
