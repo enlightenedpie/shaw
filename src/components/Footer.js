@@ -3,13 +3,15 @@ import { SocialIcon } from "react-social-icons"
 
 function Footer() {
   return (
-    <div>
-      <footer className="py-2" style={{ backgroundColor: "#5E35B1" }}>
-        <div className="container">
-          <p>The Shaw Group | © Copyright 2020</p>
-        </div>
-      </footer>
-    </div>
+    <footer>
+      <div>
+        <p>&copy; Copyright 2020</p>
+        <span>|</span>
+        <p>The Shaw Group</p>
+        <span>|</span>
+        <p>5825 North Sam Houston Pkwy W, Houston, Texas 77086</p>
+      </div>
+    </footer>
   )
 }
 

@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,800&display=swap");
+
+:root {
+  --shaw-blue: #003087;
+  --shaw-orange: #FC4C02;
+  --container-pad: 4em 20%;
+}
 
 html {
   padding: 0;
@@ -10,16 +17,24 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Roboto Slab", sans-serif !important;
+}
+
+h1 {
+  font-weight: 800;
+}
+
 .home-container {
   position: relative;
-  padding-top: 90vh;
+  padding-top: 60vh;
   width: 100%;
   overflow: hidden;
   background: whitesmoke;
 }
 
 .home-container > .container {
-  color: var(--gray-dark);
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -40,31 +55,18 @@ body {
   width: 100%
 }
 
-.navbar {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar > img {
-  width: 6em;
-  height: auto;
-  display: block;
-}
-
 .home-container > img {
   position: absolute;
   display: block;
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-45%,-50%,0);
   transition: opacity 2s ease-in-out
 }
 
 .home-container > img.active {
   opacity: .3;
-  /* animation: fadeImage 2s ease-in-out both */
 }
 
 .flexbox {
@@ -76,37 +78,87 @@ body {
 
 .centerItems {
   display: flex;
-  justify-content: center;
-  flex-direction: column
+  justify-content: center
 }
 
-.inputBox{
+.centerItems > img {
+  width: 10em;
+  height: auto;
+  display: block;
+}
+
+.about-us {
+  color: white;
+  background-color: var(--shaw-blue);
+  padding: var(--container-pad);
+}
+
+.contact-us {
+  padding: var(--container-pad);
+}
+
+.inputBox {
   width: 100%;
-  background-color: #673AB7;
-  border: none;
-  border-radius: 10px;
+  background-color: #eee;
+  border-radius: .5em;
   padding: 20px;
   text-decoration-color: white;
-  color: white
+  color: black;
+  border: 1px solid transparent;
+  transition: border 500ms ease-in-out
 }
 
 textarea:focus{
   animation: none !important
 }
 
-footer{
-  color: #B9A4DE
+.inputBox:focus {
+  border: 1px solid var(--gray-dark)
+}
+
+button.submitter {
+  color: white;
+  background-color: var(--shaw-orange);
+  transition: background-color 500ms ease-in-out
+}
+
+button.submitter:hover {
+  color: white;
+  background-color: var(--shaw-blue);
+}
+
+button.submitter + button.btn {
+  padding: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+footer {
+  background-color: var(--shaw-blue);
+  color: white;
+  padding: var(--container-pad)
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
 }
 
 footer a {
   color: white
 }
 
+footer span {
+  margin: 0 1em;
+}
+
 
 @media (max-width: 576px) {
+  :root {
+    --container-pad: 4em 2em
+  }
   .home-container {
     padding-top: unset;
-    min-height: 100vh;
+    min-height: 70vh;
   }
 }
 
@@ -115,16 +167,11 @@ footer a {
     opacity: 0;
   }
   to {
-    opacity: .25;
+    opacity: 1;
   }
 }
 
 @keyframes moveImage {
-  from {
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-45%,-50%,0);
-  }
   to {
     top: 50%;
     left: 50%;

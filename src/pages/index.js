@@ -10,6 +10,7 @@ function Index() {
   return (
     <>
       <LandingPage/>
+      <Services/>
       <End/>
       <Footer/>
     </>

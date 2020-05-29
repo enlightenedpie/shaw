@@ -1,33 +1,27 @@
 import React from "react"
-import ServiceItem from "../components/ServiceItem"
+import Fade from "react-reveal/Fade"
+import parse from "html-react-parser"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Services() {
-  const { allServicesYaml } = useStaticQuery(graphql`
+  const { pageDataYaml } = useStaticQuery(graphql`
     {
-      allServicesYaml {
-        edges {
-          node {
-            title
-            src
-          }
-        }
+      pageDataYaml {
+        landingText
+        bodyText
       }
     }
   `)
+
+  const { landingText, bodyText } = pageDataYaml
+
   return (
-    <div id = "services" className="container-fluid" style={{ backgroundColor: "#FFCD6C" }}>
-      <div className="container">
-        <div className="flexbox">
-          <h1 className="text-center my-5">Services We Offer </h1>
-          <div className="row">
-            {allServicesYaml.edges.map(({ node }) => {
-              return <ServiceItem title={node.title} src={node.src} />
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
+    <section className="about-us">
+      <Fade bottom>
+        <h1>{landingText}</h1>
+        {parse(bodyText)}
+      </Fade>
+    </section>
   )
 }
 
