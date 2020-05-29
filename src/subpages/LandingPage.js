@@ -39,9 +39,7 @@ function LandingPage() {
     <section id = "home" className = "home-container">
       {images.map((img,i) => <img alt="" src={img} className={i===active ? 'active' : ''} />)}
       <div className="container">
-        <div className="centerItems">
-          <img src={logo} />
-        </div>
+        <img src={logo} />
       </div>
     </section>
   )
