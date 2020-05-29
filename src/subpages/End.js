@@ -24,13 +24,13 @@ export default function End() {
       <div className="container">
         <div className="flexbox">
           <Fade left>
-            <h2>Contact us by submitting the form below or call us directly:</h2> 
+            <h2>Contact us by submitting the form below or call:</h2> 
             <p>
               Austin Nelson<br/>
               Shaw Business Development<br/>
               <a href="tel:7133023220">713-302-3220</a>
             </p>
-            <form disabled name="shawContactForm" netlify data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
+            <form disabled name="shawContactForm" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
 
               setSubd(true)
 
@@ -50,7 +50,7 @@ export default function End() {
             }}>
               <div className="row my-4">
                 <div className="col-lg-6 mb-4">
-                  <label for="fullname" hidden>Full Name</label>
+                  <label htmlFor="fullname" hidden>Full Name</label>
                   <input
                     required
                     type="name"
@@ -62,7 +62,7 @@ export default function End() {
                   />
                 </div>
                 <div className="col-lg-6 mb-4">
-                  <label for="email" hidden>Email Address</label>
+                  <label htmlFor="email" hidden>Email Address</label>
                   <input
                     required
                     type="email"
@@ -74,7 +74,7 @@ export default function End() {
                   />
                 </div>
                 <div className="col-lg-12">
-                  <label for="company" hidden>Company Name</label>
+                  <label htmlFor="company" hidden>Company Name</label>
                   <input
                     required
                     type="text"
@@ -86,7 +86,7 @@ export default function End() {
                   />
                 </div>
               </div>
-              <label for="message" hidden>Your Message</label>
+              <label htmlFor="message" hidden>Your Message</label>
               <textarea name="message" required rows="20" className="inputBox mb-4" placeholder="Your Message" onBlur={setState} {...disabled} />
               <button type="submit" className="submitter btn mb-4 py-3" {...disabled}>
                 Submit

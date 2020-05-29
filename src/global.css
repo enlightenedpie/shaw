@@ -82,7 +82,7 @@ h1 {
 }
 
 .centerItems > img {
-  width: 10em;
+  width: 30%;
   height: auto;
   display: block;
 }
@@ -163,6 +163,10 @@ footer span {
   .home-container {
     padding-top: unset;
     min-height: 70vh;
+  }
+
+  .centerItems > img {
+    width: 100%;
   }
 }
 
