@@ -173,6 +173,7 @@ footer span {
 
   .centerItems > img {
     width: 100%;
+    min-height: auto;
   }
 
   footer p:last-of-type {
@@ -184,6 +185,7 @@ footer span {
 @media (min-width: 577px) and (max-width: 1024px) {
   .centerItems > img {
     width: 60%;
+    min-height: auto;
   }
 
   footer span:last-of-type {
