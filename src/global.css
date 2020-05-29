@@ -132,6 +132,10 @@ button.submitter + button.btn {
   margin-bottom: 1.5rem !important;
 }
 
+input:disabled, textarea:disabled, button:disabled {
+  opacity: .5;
+}
+
 footer {
   background-color: var(--shaw-blue);
   color: white;

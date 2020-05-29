@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Krisp`,
+    title: `The Shaw Group`,
     description: `A Clean, Minimal and Responsive Site`,
-    author: `@mohanmonu777`,
+    canonical: `https://theshawgrp.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-krisp`,
-        short_name: `krisp`,
+        name: `the-shaw-group`,
+        short_name: `shaw`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#003087`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/logo.png`,
       },
     },
     `gatsby-transformer-yaml`,

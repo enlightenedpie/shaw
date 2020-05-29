@@ -10,6 +10,7 @@ const encode = data => {
 export default function End() {
   let [subd,setSubd] = useState(false),
     [success,setSuccess] = useState(false),
+    [error,setError] = useState(false),
     [state,setState] = useState({})
 
   let disabled = {}
@@ -30,8 +31,22 @@ export default function End() {
               <a href="tel:7133023220">713-302-3220</a>
             </p>
             <form disabled name="shawContactForm" netlify data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
+
+              setSubd(true)
+
+              fetch("/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: encode({ "form-name": e.target.name, ...state }),
+              })
+              .then(() => {
+                setSuccess(true)
+              })
+              .catch(err => setError(true) && console.log(err))
+
               e.preventDefault()
-              console.log(e.target)
             }}>
               <div className="row my-4">
                 <div className="col-lg-6 mb-4">
@@ -42,6 +57,7 @@ export default function End() {
                     name="fullname"
                     className="inputBox"
                     placeholder="Your Full Name"
+                    onBlur={setState}
                     {...disabled}
                   />
                 </div>
@@ -53,6 +69,7 @@ export default function End() {
                     name="email"
                     className="inputBox"
                     placeholder="Your Email"
+                    onBlur={setState}
                     {...disabled}
                   />
                 </div>
@@ -64,16 +81,19 @@ export default function End() {
                     name="company"
                     className="inputBox"
                     placeholder="Company Name"
+                    onBlur={setState}
                     {...disabled}
                   />
                 </div>
               </div>
               <label for="message" hidden>Your Message</label>
-              <textarea name="message" required rows="20" className="inputBox mb-4" placeholder="Your Message" {...disabled} />
+              <textarea name="message" required rows="20" className="inputBox mb-4" placeholder="Your Message" onBlur={setState} {...disabled} />
               <button type="submit" className="submitter btn mb-4 py-3" {...disabled}>
                 Submit
               </button>
-              { success ? <button className="btn" disabled>Thank you! We'll be in touch shortly.</button> : null}
+              { success ? <button className="btn" disabled>Thank you! We'll be in touch shortly.</button> : 
+                error ? <button className="btn" disabled>Oops, something went wrong. Refresh and try again.</button> : null}
+              <div data-netlify-recaptcha="true"></div>
             </form>
           </Fade>
         </div>
