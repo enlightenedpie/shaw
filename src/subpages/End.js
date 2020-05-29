@@ -7,11 +7,6 @@ const encode = data => {
     .join("&")
 }
 
-const onSubmit = e => {
-  e.preventDefault()
-  console.log(e.target)
-}
-
 export default function End() {
   let [subd,setSubd] = useState(false),
     [success,setSuccess] = useState(false),
@@ -34,7 +29,10 @@ export default function End() {
               Shaw Business Development<br/>
               <a href="tel:7133023220">713-302-3220</a>
             </p>
-            <form disabled name="shawContactForm" netlify data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={onSubmit}>
+            <form disabled name="shawContactForm" netlify data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
+              e.preventDefault()
+              console.log(e.target)
+            }}>
               <div className="row my-4">
                 <div className="col-lg-6 mb-4">
                   <label for="fullname" hidden>Full Name</label>
