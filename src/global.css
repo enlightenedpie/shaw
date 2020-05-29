@@ -145,6 +145,7 @@ footer {
 footer > div {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer a {
@@ -158,15 +159,35 @@ footer span {
 
 @media (max-width: 576px) {
   :root {
-    --container-pad: 4em 2em
+    --container-pad: 4em 2em;
   }
   .home-container {
     padding-top: unset;
     min-height: 70vh;
   }
 
+  .home-container > img {
+    height: 101%;
+    width: auto;
+  }
+
   .centerItems > img {
     width: 100%;
+  }
+
+  footer p:last-of-type {
+    flex: 1 1 100%;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+  .centerItems > img {
+    width: 60%;
+  }
+
+  footer span:last-of-type {
+    display: none;
   }
 }
 
