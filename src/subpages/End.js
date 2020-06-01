@@ -31,6 +31,9 @@ export default function End() {
               <a href="tel:7133023220">713-302-3220</a>
             </p>
             <form disabled name="shawContactForm" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
+              let inputs = e.target.querySelectorAll('input, textarea')
+
+              inputs.forEach((inp) => inp.blur())
 
               setSubd(true)
 
