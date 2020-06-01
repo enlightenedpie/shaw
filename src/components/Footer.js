@@ -1,15 +1,19 @@
 import React from "react"
 import { SocialIcon } from "react-social-icons"
 
-function Footer() {
+var date = new Date()
+
+function Footer({title,address}) {
+
   return (
     <footer>
+      <div>hello</div>
       <div>
-        <p>&copy; Copyright 2020</p>
+        <p>&copy; Copyright {date.getFullYear()}</p>
         <span>|</span>
-        <p>The Shaw Group</p>
+        <p>{title}</p>
         <span>|</span>
-        <p>5825 North Sam Houston Pkwy W, Houston, Texas 77086</p>
+        <p>{address}</p>
       </div>
     </footer>
   )

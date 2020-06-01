@@ -16,12 +16,13 @@ function Index() {
           canonical
           description
           title
+          address
         }
       }
     }
   `)
 
-  let { siteMetadata: { title, description, canonical } } = query.site
+  let { siteMetadata: { title, description, canonical, address } } = query.site
   return (
     <>
       <Helmet>
@@ -33,7 +34,7 @@ function Index() {
       <LandingPage/>
       <Services/>
       <End/>
-      <Footer/>
+      <Footer title={title} address={address}/>
     </>
   )
 }

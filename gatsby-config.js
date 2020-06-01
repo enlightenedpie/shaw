@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `The Shaw Group`,
     description: `A Clean, Minimal and Responsive Site`,
-    canonical: `https://theshawgrp.com`
+    canonical: `https://theshawgrp.com`,
+    address: `5825 North Sam Houston Pkwy W, Houston, Texas 77086`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

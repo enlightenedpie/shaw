@@ -4,7 +4,7 @@
 :root {
   --shaw-blue: #003087;
   --shaw-orange: #FC4C02;
-  --container-pad: 4em 20%;
+  --container-pad: 2em 20%;
 }
 
 html {
@@ -182,14 +182,16 @@ footer span {
 
 }
 
+@media (max-width: 1024px) {
+  footer span:last-of-type {
+    display: none;
+  }
+}
+
 @media (min-width: 577px) and (max-width: 1024px) {
   .home-container > .container > img {
     width: 60%;
     min-height: auto;
-  }
-
-  footer span:last-of-type {
-    display: none;
   }
 }
 
