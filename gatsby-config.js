@@ -3,7 +3,7 @@ module.exports = {
     title: `The Shaw Group`,
     description: `A Clean, Minimal and Responsive Site`,
     canonical: `https://theshawgrp.com`,
-    address: `5825 North Sam Houston Pkwy W, Houston, Texas 77086`
+    address: `19450 SH 249 Suite 450, Houston, Texas 77070`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
