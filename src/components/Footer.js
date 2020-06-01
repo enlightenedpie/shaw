@@ -7,7 +7,7 @@ function Footer({title,address}) {
 
   return (
     <footer>
-      <div>hello</div>
+      {/* <div>hello</div> */}
       <div>
         <p>&copy; Copyright {date.getFullYear()}</p>
         <span>|</span>
