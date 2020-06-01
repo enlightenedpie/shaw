@@ -33,7 +33,10 @@ export default function End() {
             <form disabled name="shawContactForm" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => {
               let inputs = e.target.querySelectorAll('input, textarea')
 
-              for (var i=0;i<inputs.length;++i) inputs[i].focus().blur()
+              for (var i=0;i<inputs.length;++i) {
+                inputs[i].focus()
+                inputs[i].blur()
+              }
 
               setSubd(true)
 
