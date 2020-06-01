@@ -149,6 +149,7 @@ footer > div {
 }
 
 footer a {
+  text-align: center;
   color: white
 }
 
@@ -156,6 +157,12 @@ footer span {
   margin: 0 1em;
 }
 
+.social-icon {
+  margin: 1em;
+}
+g.social-svg-icon {
+  fill: white !important;
+}
 
 @media (max-width: 576px) {
   :root {
